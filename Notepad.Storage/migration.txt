@@ -1,0 +1,7 @@
+﻿CREATE 
+
+dotnet ef migrations add .. -o \Data\Migration -s .\Notepad.API\ -p .\Notepad.Storage\ 
+
+UPDATE
+
+dotnet ef database update -s .\Notepad.API\ -p .\Notepad.Storage\ 

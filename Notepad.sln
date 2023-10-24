@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notepad.API", "Notepad.API\Notepad.API.csproj", "{2FAA2FDE-380B-48E5-88BA-333E824D917C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notepad.Domain", "Notepad.Domain\Notepad.Domain.csproj", "{A2EC3B81-81F2-4F01-A46A-DCC737BAEACC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notepad.Application", "Notepad.Application\Notepad.Application.csproj", "{A6E92027-22C8-4BD1-A288-1C15BC3AC84B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notepad.Application.DependencyInjection", "Notepad.Application.DependencyInjection\Notepad.Application.DependencyInjection.csproj", "{F533106C-FB62-4E5C-9382-70F262A6F627}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notepad.Storage", "Notepad.Storage\Notepad.Storage.csproj", "{3CFAAADB-9989-4B3D-BB03-D7D1B7DB9243}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notepad.Storage.DependencyInjection", "Notepad.Storage.DependencyInjection\Notepad.Storage.DependencyInjection.csproj", "{3D28CAF4-E7E0-42B2-A4E5-CFFC067FC3B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notepad.Domain.DependencyInjection", "Notepad.Domain.DependencyInjection\Notepad.Domain.DependencyInjection.csproj", "{3615905B-A17D-4B6C-8BB1-22C11A126863}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2FAA2FDE-380B-48E5-88BA-333E824D917C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FAA2FDE-380B-48E5-88BA-333E824D917C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FAA2FDE-380B-48E5-88BA-333E824D917C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FAA2FDE-380B-48E5-88BA-333E824D917C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2EC3B81-81F2-4F01-A46A-DCC737BAEACC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2EC3B81-81F2-4F01-A46A-DCC737BAEACC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2EC3B81-81F2-4F01-A46A-DCC737BAEACC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2EC3B81-81F2-4F01-A46A-DCC737BAEACC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6E92027-22C8-4BD1-A288-1C15BC3AC84B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6E92027-22C8-4BD1-A288-1C15BC3AC84B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6E92027-22C8-4BD1-A288-1C15BC3AC84B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6E92027-22C8-4BD1-A288-1C15BC3AC84B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F533106C-FB62-4E5C-9382-70F262A6F627}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F533106C-FB62-4E5C-9382-70F262A6F627}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F533106C-FB62-4E5C-9382-70F262A6F627}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F533106C-FB62-4E5C-9382-70F262A6F627}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CFAAADB-9989-4B3D-BB03-D7D1B7DB9243}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CFAAADB-9989-4B3D-BB03-D7D1B7DB9243}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CFAAADB-9989-4B3D-BB03-D7D1B7DB9243}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CFAAADB-9989-4B3D-BB03-D7D1B7DB9243}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D28CAF4-E7E0-42B2-A4E5-CFFC067FC3B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D28CAF4-E7E0-42B2-A4E5-CFFC067FC3B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D28CAF4-E7E0-42B2-A4E5-CFFC067FC3B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D28CAF4-E7E0-42B2-A4E5-CFFC067FC3B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3615905B-A17D-4B6C-8BB1-22C11A126863}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3615905B-A17D-4B6C-8BB1-22C11A126863}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3615905B-A17D-4B6C-8BB1-22C11A126863}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3615905B-A17D-4B6C-8BB1-22C11A126863}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D9EBA544-BDB2-4E42-82B8-4C1A48B309BE}
+	EndGlobalSection
+EndGlobal
