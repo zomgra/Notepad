@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notepad.Storage", "Notepad.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notepad.Storage.DependencyInjection", "Notepad.Storage.DependencyInjection\Notepad.Storage.DependencyInjection.csproj", "{3D28CAF4-E7E0-42B2-A4E5-CFFC067FC3B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notepad.Domain.DependencyInjection", "Notepad.Domain.DependencyInjection\Notepad.Domain.DependencyInjection.csproj", "{3615905B-A17D-4B6C-8BB1-22C11A126863}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notepad.Domain.DependencyInjection", "Notepad.Domain.DependencyInjection\Notepad.Domain.DependencyInjection.csproj", "{3615905B-A17D-4B6C-8BB1-22C11A126863}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DI", "DI", "{F878D41A-E774-468C-84CC-54AE39921EC2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -54,6 +56,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F533106C-FB62-4E5C-9382-70F262A6F627} = {F878D41A-E774-468C-84CC-54AE39921EC2}
+		{3D28CAF4-E7E0-42B2-A4E5-CFFC067FC3B1} = {F878D41A-E774-468C-84CC-54AE39921EC2}
+		{3615905B-A17D-4B6C-8BB1-22C11A126863} = {F878D41A-E774-468C-84CC-54AE39921EC2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D9EBA544-BDB2-4E42-82B8-4C1A48B309BE}

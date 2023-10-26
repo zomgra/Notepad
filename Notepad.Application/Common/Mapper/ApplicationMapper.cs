@@ -9,6 +9,9 @@ namespace Notepad.Application.Common.Mapper
         public ApplicationMapper()
         {
             CreateMap<Note, NoteViewModel>();
+            CreateMap<NoteChunk, ChunkViewModel>();
+            CreateMap<User, UserViewModel>();
+
         }
     }
 }
