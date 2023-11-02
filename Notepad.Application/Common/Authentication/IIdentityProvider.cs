@@ -23,7 +23,7 @@ namespace Notepad.Application.Common.Authentication
         {
             get
             {
-                var strId = _httpContextAccessor?.HttpContext?.User.FindFirstValue("Id"); 
+                var strId = _httpContextAccessor?.HttpContext?.User.FindFirstValue("NoteId"); 
 
                 var id = Guid.Parse(strId);
                 return id;

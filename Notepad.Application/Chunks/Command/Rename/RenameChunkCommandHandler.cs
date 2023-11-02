@@ -3,41 +3,39 @@ using Microsoft.EntityFrameworkCore;
 using Notepad.Application.Common.Authentication;
 using Notepad.Domain.Exceptions;
 using Notepad.Storage;
-using System.Data.Common;
 
-namespace Notepad.Application.Notes.Command.Delete
+namespace Notepad.Application.Chunks.Command.Rename
 {
-    public class DeleteNoteCommandHandler : IRequestHandler<DeleteNoteCommand, Unit>
+    public class RenameChunkCommandHandler : IRequestHandler<RenameChunkCommand, Unit>
     {
         private readonly NoteDbContext _context;
         private readonly IIdentityProvider _identityProvider;
 
-        public DeleteNoteCommandHandler(NoteDbContext context,
+        public RenameChunkCommandHandler(NoteDbContext context,
             IIdentityProvider identityProvider)
         {
             _context = context;
             _identityProvider = identityProvider;
         }
 
-        public async Task<Unit> Handle(DeleteNoteCommand request, CancellationToken cancellationToken)
+        public async Task<Unit> Handle(RenameChunkCommand request, CancellationToken cancellationToken)
         {
-            var note = await _context.Notes.Include(x=>x.Owner).FirstOrDefaultAsync(x => x.Id == request.NoteId, cancellationToken);
-            if (note == null)
-                throw new NotepadNotFoundException($"Note not found with id: {request.NoteId}"); /// TODO: Change to self exceptions;
-
-            if (note.OwnerId != _identityProvider.UserId)
+            var chunk = await _context.Chunks.FirstOrDefaultAsync(x => x.Id == request.ChunkId, cancellationToken);
+            if (chunk == null)
+                throw new NotepadNotFoundException($"Chunk with id: {request.ChunkId} not found");
+            if (_identityProvider.UserId != chunk.OwnerId)
                 throw new UnauthorizedAccessException();
 
             var transaction = await _context.Database.BeginTransactionAsync(cancellationToken);
             try
             {
-                _context.Notes.Remove(note);
+                chunk.Rename(request.NewName);
                 await _context.SaveChangesAsync(cancellationToken);
                 await transaction.CommitAsync(cancellationToken);
             }
             catch(Exception ex)
             {
-                transaction.Rollback();
+                await transaction.RollbackAsync(cancellationToken);
             }
             return Unit.Value;
         }

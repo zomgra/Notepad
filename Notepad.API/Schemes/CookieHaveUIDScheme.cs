@@ -31,13 +31,13 @@ namespace Notepad.API.Schemes
             var strId = cookie.ToString();
             if(!Guid.TryParse(strId, out var id))
             {
-                return AuthenticateResult.Fail("You have problem with your User Id");
+                return AuthenticateResult.Fail("You have problem with your User NoteId");
             }
             return AuthenticateResult.Success(new AuthenticationTicket(new ClaimsPrincipal(new ClaimsIdentity(GenerateClaims(Context), nameof(CookieHaveUIDScheme))), nameof(CookieHaveUIDScheme)));;
         }
         private IEnumerable<Claim> GenerateClaims(HttpContext context)
         {
-            yield return new Claim("Id", context?.Request?.Cookies["UID"].ToString());
+            yield return new Claim("NoteId", context?.Request?.Cookies["UID"].ToString());
         }
     }
 }

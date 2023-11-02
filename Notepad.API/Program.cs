@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Authentication;
+using Notepad.API.Middleware;
 using Notepad.API.Schemes;
 using Notepad.Application.DependencyInjection;
 using Notepad.Storage.DependencyInjection;
@@ -32,13 +33,16 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(c =>
+    {
+    });
 }
 
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
-app.MapControllers();
+app.UseApplicationExceptionHandler();
 
+app.MapControllers();
 app.Run();

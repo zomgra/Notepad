@@ -24,7 +24,7 @@ namespace Notepad.Application.Chunks.Command.Create.Create
 
         public async Task<ChunkViewModel> Handle(CreateChunkCommand request, CancellationToken cancellationToken)
         {
-            var chunk = new NoteChunk(request.name);
+            var chunk = new NoteChunk(request.Name);
 
             chunk.OwnerId = _provider.UserId;
             var transient = await _context.Database.BeginTransactionAsync(cancellationToken);

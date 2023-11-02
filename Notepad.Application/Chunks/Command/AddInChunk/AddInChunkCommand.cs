@@ -2,5 +2,5 @@
 
 namespace Notepad.Application.Chunks.Command.AddInChunk
 {
-    public record AddInChunkCommand(Guid noteId, Guid chunkId) : IRequest<bool>;
+    public record AddInChunkCommand(Guid NoteId, Guid ChunkId) : IRequest<bool>;
 }

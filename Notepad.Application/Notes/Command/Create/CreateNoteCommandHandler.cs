@@ -33,7 +33,7 @@ namespace Notepad.Application.Notes.Command.Create
             if (user == null)
                 throw new UnauthorizedAccessException();
 
-            var note = new Note(request.title, request.description);
+            var note = new Note(request.Title, request.Description);
             _noteContext.Users.Attach(user);
             await _noteContext.AddAsync(note, cancellationToken);
             note.Owner = user;
